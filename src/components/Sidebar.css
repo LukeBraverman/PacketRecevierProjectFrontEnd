@@ -1,0 +1,17 @@
+.sidebar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Push content to top and bottom */
+    align-items: center; /* Center items horizontally */
+    padding: 20px 0; /* Optional padding for spacing */
+    box-sizing: border-box; /* Include padding in total size */
+}
+
+.connectionTest {
+    display: flex;
+    justify-content: space-between; /* Push content to top and bottom */
+    align-items: center; /* Center items horizontally */
+
+}
