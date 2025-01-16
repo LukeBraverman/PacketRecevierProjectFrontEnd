@@ -2,40 +2,58 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
+// Define the props interface matching the PacketLog model
+interface LogCardProps {
+    data: string;
+    senderIp: number;
+    senderPort: number;
+    bufferSize: number;
+    packetLength: number;
+    date: string;
+    time: string;
+}
 
-function LogCard()
-{
-
-
-    return(
-        <Card sx={{ minWidth: 275, minHeight: 220   }}>
+function LogCard({
+                     data,
+                     senderIp,
+                     senderPort,
+                     bufferSize,
+                     packetLength,
+                     date,
+                     time
+                 }: LogCardProps) {
+    return (
+        <Card sx={{ minWidth: 275, minHeight: 220, marginBottom: 2 }}>
             <CardContent>
+                {/* Date and Time */}
                 <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
-                    14/01/2025 - 16.39pm
+                    {date} - {time}
                 </Typography>
+
+                {/* Header */}
                 <Typography variant="h5" component="div">
                     📦 Packet Received!
                 </Typography>
+
+                {/* Packet Details */}
                 <Typography variant="body2">
-                    🔹 Data Received: Hello, UDP!
+                    🔹 Data Received: {data}
                 </Typography>
                 <Typography variant="body2">
-                    🔹 Sender IP: /192.168.1.253
+                    🔹 Sender IP: /{senderIp}
                 </Typography>
                 <Typography variant="body2">
-                    🔹 Sender Port: 60274
+                    🔹 Sender Port: {senderPort}
                 </Typography>
                 <Typography variant="body2">
-                    🔹 Buffer Size: 1024 bytes
+                    🔹 Buffer Size: {bufferSize} bytes
                 </Typography>
                 <Typography variant="body2">
-                    🔹 Packet Length: 11 bytes
+                    🔹 Packet Length: {packetLength} bytes
                 </Typography>
             </CardContent>
-
         </Card>
-
-    )
+    );
 }
 
 export default LogCard;
