@@ -7,7 +7,7 @@ function Sidebar()
     {
         const SERVER_IP: string = '127.0.0.1';
         const label = { inputProps: { 'aria-label': 'Switch demo' } };
-        const [isBackendAlive, setIsBackendAlive] = useState(true);
+        const [isBackendAlive, setIsBackendAlive] = useState(false);
 
         useEffect(() => {
             const checkBackend = () => {

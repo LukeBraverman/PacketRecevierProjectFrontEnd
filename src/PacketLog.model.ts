@@ -1,6 +1,6 @@
 export interface PacketLog {
     data: string;        // Packet data content
-    senderIp: number;    // Sender's IP address
+    senderIp: string;    // Sender's IP address
     packetLength: number; // Length of the packet in bytes
     bufferSize: number;   // Size of the buffer used
     senderPort: number;   // Sender's port number

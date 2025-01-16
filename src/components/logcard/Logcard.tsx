@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 // Define the props interface matching the PacketLog model
 interface LogCardProps {
     data: string;
-    senderIp: number;
+    senderIp: string;
     senderPort: number;
     bufferSize: number;
     packetLength: number;
