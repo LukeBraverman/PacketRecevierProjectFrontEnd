@@ -1,6 +1,6 @@
 # 📦 Packet Viewer Project
 
-An end-to-end network packet visualization tool that captures, logs, and displays UDP packet data in real-time. This project demonstrates full-stack development, system configuration, and cloud deployment skills using a modern tech stack.
+An end-to-end network packet visualization tool that captures, logs, and displays UDP packet data in real-time. This project was created with AWS / Java / React / Nginx.
 ---
 
 ## 🌐 Live Demo
