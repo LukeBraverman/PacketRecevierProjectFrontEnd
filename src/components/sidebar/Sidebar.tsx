@@ -2,10 +2,12 @@ import './Sidebar.css';
 import Switch from "@mui/material/Switch";
 import {useEffect, useState} from "react";
 
-
-function Sidebar()
+interface SidebarProps {
+    serverIp: string;
+}
+function Sidebar({serverIp}: SidebarProps)
     {
-        const SERVER_IP: string = '127.0.0.1';
+        const SERVER_IP: string = serverIp;
         const label = { inputProps: { 'aria-label': 'Switch demo' } };
         const [isBackendAlive, setIsBackendAlive] = useState(false);
 

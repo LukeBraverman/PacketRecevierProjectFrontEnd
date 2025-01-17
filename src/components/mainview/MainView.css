@@ -1,14 +1,12 @@
-
 .mainView {
     width: 40%;
     height: 85%;
-    /*background-color: blueviolet;*/
     display: flex;
     gap: 5px;
     flex-direction: column;
     padding: 20px;
-    overflow-y: scroll; /* Enables vertical scrolling */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 
 }

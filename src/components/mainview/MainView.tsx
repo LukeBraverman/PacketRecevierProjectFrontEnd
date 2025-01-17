@@ -3,10 +3,15 @@ import Logcard from "../logcard/Logcard.tsx";
 import {useEffect, useState} from "react";
 import {PacketLog} from "../../PacketLog.model.ts";
 
-function MainView()
+interface MainViewProps {
+    serverIp: string;
+}
+
+function MainView({serverIp}: MainViewProps)
 {
 
-    const SERVER_IP: string = '127.0.0.1';
+    const SERVER_IP: string = serverIp;
+
     const [logs, setLogs] = useState<PacketLog[]>([]);  // State to store logs
 
     useEffect(() => {

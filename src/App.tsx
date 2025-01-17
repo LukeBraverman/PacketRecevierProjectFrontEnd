@@ -1,20 +1,18 @@
 import './App.css'
-import Sidebar from "./components/Sidebar.tsx";
+import Sidebar from "./components/sidebar/Sidebar.tsx";
 import MainView from "./components/mainview/MainView.tsx";
 
 function App() {
 
+  const SERVER_IP: string = "127.0.0.1";
+
   return (
-      <div style={{display: 'flex', height: '100vh', width: '100vw', flexDirection: 'row'}}>
-          <div  style={{flex: 1, position: "sticky"}}>
-              <Sidebar/>
+      <div className='mainBodyStructure'>
+          <div  className='sidebarStructure'>
+              <Sidebar serverIp={SERVER_IP} />
           </div>
-          <div style={{flex: 4, backgroundColor: '#f9f9f9', height: '100%', display: 'flex',
-          justifyContent: 'center', alignItems: 'start', paddingTop: '10px'}}>
-
-             <MainView />
-
-
+          <div className='mainViewStructure'>
+             <MainView serverIp={SERVER_IP} />
           </div>
       </div>
   )
